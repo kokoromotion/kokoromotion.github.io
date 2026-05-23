@@ -1,151 +1,1135 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>こころ鍼灸接骨院・整体院 | 台東区入谷</title>
-    <style>
-        /* 全体設定 */
-        body { font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', sans-serif; line-height: 1.7; margin: 0; padding: 0; color: #333; background-color: #fcfbfa; }
-        h1, h2, h3 { margin: 0; font-weight: bold; }
-        ul { padding-left: 20px; margin: 0; }
-        
-        /* メインカラー定義（落ち着いた緑） */
-        :root { --main-color: #3B6645; --sub-color: #E8F0E9; --accent-color: #D96B43; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>こころ鍼灸接骨院・整体院 | 台東区入谷 – 肩こり・腰痛・膝の不安</title>
+<meta name="description" content="台東区入谷の鍼灸・接骨・整体院。肩こり・腰痛・膝の不安を、姿勢や動き方から丁寧に施術。国家資格者が対応。電話03-5603-4115">
 
-        /* ヘッダー・メインビジュアル */
-        header { background-color: var(--main-color); color: white; text-align: center; padding: 3rem 1rem; }
-        header h1 { font-size: 1.8rem; margin-bottom: 0.5rem; letter-spacing: 1px; }
-        header p { margin: 0; font-size: 1rem; opacity: 0.9; }
+<!-- Schema.org JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalBusiness",
+  "name": "こころ鍼灸接骨院・整体院",
+  "image": "https://kokoromotion.github.io/images/exterior.jpg",
+  "url": "https://kokoromotion.github.io/",
+  "telephone": "03-5603-4115",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "入谷1-7-7",
+    "addressLocality": "台東区",
+    "addressRegion": "東京都",
+    "postalCode": "110-0013",
+    "addressCountry": "JP"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 35.720209,
+    "longitude": 139.785185
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "09:00",
+      "closes": "19:00"
+    }
+  ],
+  "priceRange": "¥¥",
+  "medicalSpecialty": "Musculoskeletal",
+  "hasMap": "https://maps.google.com/?q=35.720209,139.785185"
+}
+</script>
 
-        /* コンテナ */
-        .container { max-width: 640px; margin: 0 auto; padding: 2rem 1.2rem; box-sizing: border-box; }
-        
-        /* セクション共通 */
-        section { background: white; padding: 1.8rem 1.2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); margin-bottom: 2rem; }
-        section h2 { font-size: 1.4rem; color: var(--main-color); border-left: 4px solid var(--main-color); padding-left: 10px; margin-bottom: 1.5rem; }
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@300;400;500;700&family=Noto+Sans+JP:wght@300;400;500&family=Shippori+Mincho:wght@400;500;700&display=swap" rel="stylesheet">
 
-        /* 悩みリスト */
-        .problem-list li { margin-bottom: 0.8rem; font-size: 1.05rem; list-style-type: '・'; padding-left: 5px; }
+<style>
+  /* ===== CSS Variables ===== */
+  :root {
+    --green-deep: #2d5a3d;
+    --green-mid: #4a7c59;
+    --green-light: #7aad8a;
+    --green-pale: #e8f0eb;
+    --cream: #faf8f4;
+    --warm-white: #fdfcfa;
+    --text-dark: #1a2e22;
+    --text-mid: #3d5247;
+    --text-soft: #6b8070;
+    --accent-warm: #c4956a;
+    --accent-light: #e8d5bc;
+    --border: #d4e0d8;
+    --shadow: rgba(45, 90, 61, 0.12);
+  }
 
-        /* 特徴・強み */
-        .feature-item { background: var(--sub-color); padding: 1rem; border-radius: 6px; margin-bottom: 1rem; }
-        .feature-item h3 { font-size: 1.15rem; color: #222; margin-bottom: 0.5rem; }
-        .feature-item p { margin: 0; font-size: 0.95rem; }
+  /* ===== Reset & Base ===== */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-        /* プロフィール */
-        .profile-box { border: 1px solid #ddd; padding: 1.2rem; border-radius: 6px; margin-bottom: 1rem; background: #fff; }
-        .profile-name { font-size: 1.2rem; color: var(--main-color); margin-bottom: 0.2rem; }
-        .profile-title { font-size: 0.85rem; color: #666; margin-bottom: 0.8rem; }
+  html { scroll-behavior: smooth; font-size: 16px; }
 
-        /* 料金表 */
-        table { width: 100%; border-collapse: collapse; margin-top: 1rem; font-size: 0.95rem; }
-        th, td { border-bottom: 1px solid #ddd; padding: 0.8rem 0.5rem; text-align: left; }
-        th { background-color: var(--sub-color); color: #222; width: 65%; font-weight: bold; }
-        td { text-align: right; font-weight: bold; color: #222; }
-        .table-sub { font-size: 0.85rem; color: #666; padding: 0.3rem 0; text-align: left; border: none; }
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--cream);
+    color: var(--text-dark);
+    line-height: 1.8;
+    overflow-x: hidden;
+  }
 
-        /* コンタクトボタン */
-        .btn-zone { margin-top: 1.5rem; }
-        .btn { display: block; text-align: center; padding: 1rem; border-radius: 6px; font-weight: bold; text-decoration: none; margin-bottom: 1rem; font-size: 1.1rem; box-shadow: 0 3px 6px rgba(0,0,0,0.1); }
-        .btn-tel { background-color: #fff; color: var(--main-color); border: 2px solid var(--main-color); }
-        .btn-line { background-color: #06C755; color: white; }
+  img { max-width: 100%; height: auto; display: block; }
 
-        /* フッター */
-        footer { text-align: center; padding: 2rem 1rem; color: #666; font-size: 0.85rem; }
-    </style>
+  a { color: inherit; text-decoration: none; }
+
+  /* ===== Header / Nav ===== */
+  header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    background: rgba(250, 248, 244, 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 24px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .logo {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--green-deep);
+    letter-spacing: 0.05em;
+    line-height: 1.3;
+  }
+
+  .logo span {
+    display: block;
+    font-size: 0.65rem;
+    font-weight: 400;
+    color: var(--text-soft);
+    letter-spacing: 0.08em;
+  }
+
+  .header-cta {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .btn-tel {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: var(--green-deep);
+    color: white;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    transition: background 0.2s;
+  }
+
+  .btn-tel:hover { background: var(--green-mid); }
+
+  .btn-line {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: #06C755;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    transition: opacity 0.2s;
+  }
+
+  .btn-line:hover { opacity: 0.88; }
+
+  /* ===== Hero ===== */
+  .hero {
+    margin-top: 64px;
+    min-height: 92vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: var(--green-deep);
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('images/treatment-hands.jpg');
+    background-size: cover;
+    background-position: center 30%;
+    opacity: 0.35;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      135deg,
+      rgba(45, 90, 61, 0.92) 0%,
+      rgba(45, 90, 61, 0.7) 50%,
+      rgba(45, 90, 61, 0.4) 100%
+    );
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 60px 28px 80px;
+    max-width: 680px;
+    animation: fadeUp 0.9s ease both;
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-label {
+    display: inline-block;
+    background: var(--accent-warm);
+    color: white;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    padding: 5px 12px;
+    border-radius: 3px;
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+
+  .hero h1 {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(1.8rem, 5vw, 2.8rem);
+    font-weight: 700;
+    color: white;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    margin-bottom: 20px;
+  }
+
+  .hero h1 em {
+    font-style: normal;
+    color: var(--green-light);
+  }
+
+  .hero-sub {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.82);
+    line-height: 1.9;
+    margin-bottom: 32px;
+    font-weight: 300;
+  }
+
+  .hero-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: white;
+    color: var(--green-deep);
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.03em;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  }
+
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(0,0,0,0.2); }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #06C755;
+    color: white;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.03em;
+    transition: transform 0.2s, opacity 0.2s;
+    box-shadow: 0 4px 20px rgba(6,199,85,0.3);
+  }
+
+  .btn-secondary:hover { transform: translateY(-2px); opacity: 0.92; }
+
+  .hero-scroll {
+    position: absolute;
+    bottom: 28px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    color: rgba(255,255,255,0.5);
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    animation: bounce 2s infinite;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50% { transform: translateX(-50%) translateY(6px); }
+  }
+
+  /* ===== Section Base ===== */
+  section { padding: 72px 24px; }
+
+  .section-inner { max-width: 720px; margin: 0 auto; }
+
+  .section-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    color: var(--green-mid);
+    text-transform: uppercase;
+    font-weight: 500;
+    margin-bottom: 12px;
+  }
+
+  .section-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(1.4rem, 4vw, 2rem);
+    font-weight: 700;
+    color: var(--text-dark);
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    margin-bottom: 32px;
+  }
+
+  .divider {
+    width: 40px;
+    height: 3px;
+    background: var(--green-mid);
+    margin: 16px 0 32px;
+    border-radius: 2px;
+  }
+
+  /* ===== Trouble Section ===== */
+  .trouble {
+    background: var(--warm-white);
+  }
+
+  .trouble-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 40px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .trouble-list li {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 20px;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.92rem;
+    color: var(--text-mid);
+    background: white;
+    transition: background 0.2s;
+    animation: fadeUp 0.6s ease both;
+  }
+
+  .trouble-list li:last-child { border-bottom: none; }
+  .trouble-list li:hover { background: var(--green-pale); }
+
+  .trouble-list li::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    min-width: 8px;
+    border-radius: 50%;
+    background: var(--green-mid);
+  }
+
+  .trouble-closing {
+    background: var(--green-pale);
+    border-left: 4px solid var(--green-mid);
+    padding: 20px 20px;
+    border-radius: 0 8px 8px 0;
+    font-size: 0.9rem;
+    color: var(--text-mid);
+    line-height: 1.9;
+  }
+
+  /* ===== Features Section ===== */
+  .features {
+    background: var(--cream);
+  }
+
+  .feature-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 20px var(--shadow);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+
+  .feature-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px var(--shadow);
+  }
+
+  .feature-img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+  }
+
+  .feature-body {
+    padding: 24px 22px;
+  }
+
+  .feature-num {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--green-pale);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+
+  .feature-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--green-deep);
+    margin-bottom: 12px;
+    line-height: 1.5;
+  }
+
+  .feature-text {
+    font-size: 0.88rem;
+    color: var(--text-soft);
+    line-height: 1.9;
+  }
+
+  /* ===== Staff Section ===== */
+  .staff {
+    background: var(--green-deep);
+  }
+
+  .staff .section-title { color: white; }
+  .staff .section-label { color: var(--green-light); }
+  .staff .divider { background: var(--green-light); }
+
+  .staff-card {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    backdrop-filter: blur(4px);
+  }
+
+  .staff-img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+    object-position: center top;
+  }
+
+  .staff-body {
+    padding: 24px 22px;
+  }
+
+  .staff-name {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 4px;
+    letter-spacing: 0.06em;
+  }
+
+  .staff-kana {
+    font-size: 0.75rem;
+    color: var(--green-light);
+    letter-spacing: 0.08em;
+    margin-bottom: 10px;
+  }
+
+  .staff-license {
+    display: inline-block;
+    background: rgba(122, 173, 138, 0.2);
+    border: 1px solid var(--green-light);
+    color: var(--green-light);
+    font-size: 0.72rem;
+    padding: 4px 10px;
+    border-radius: 4px;
+    margin-bottom: 14px;
+    letter-spacing: 0.05em;
+  }
+
+  .staff-text {
+    font-size: 0.87rem;
+    color: rgba(255,255,255,0.75);
+    line-height: 1.95;
+  }
+
+  /* ===== Philosophy ===== */
+  .philosophy {
+    background: var(--cream);
+  }
+
+  .philosophy-quote {
+    font-family: 'Shippori Mincho', serif;
+    font-size: clamp(1rem, 3vw, 1.3rem);
+    font-weight: 500;
+    color: var(--green-deep);
+    line-height: 2;
+    letter-spacing: 0.06em;
+    padding: 28px 24px;
+    border-left: 4px solid var(--green-mid);
+    background: var(--green-pale);
+    border-radius: 0 12px 12px 0;
+    margin-bottom: 28px;
+  }
+
+  /* ===== Price Section ===== */
+  .price {
+    background: var(--warm-white);
+  }
+
+  .price-group {
+    margin-bottom: 28px;
+  }
+
+  .price-group-title {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--green-deep);
+    padding: 10px 16px;
+    background: var(--green-pale);
+    border-radius: 6px 6px 0 0;
+    border-left: 4px solid var(--green-mid);
+  }
+
+  .price-table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid var(--border);
+    border-top: none;
+    border-radius: 0 0 8px 8px;
+    overflow: hidden;
+    background: white;
+  }
+
+  .price-table tr {
+    border-bottom: 1px solid var(--border);
+    transition: background 0.2s;
+  }
+
+  .price-table tr:last-child { border-bottom: none; }
+  .price-table tr:hover { background: var(--green-pale); }
+
+  .price-table td {
+    padding: 14px 16px;
+    font-size: 0.88rem;
+    color: var(--text-mid);
+    vertical-align: top;
+    line-height: 1.7;
+  }
+
+  .price-table td:last-child {
+    text-align: right;
+    font-weight: 600;
+    color: var(--green-deep);
+    white-space: nowrap;
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1rem;
+  }
+
+  .price-note {
+    font-size: 0.8rem;
+    color: var(--text-soft);
+    margin-top: 12px;
+    line-height: 1.7;
+    padding: 0 4px;
+  }
+
+  /* ===== Gallery ===== */
+  .gallery {
+    background: var(--cream);
+    padding-bottom: 0;
+  }
+
+  .gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 32px;
+  }
+
+  .gallery-grid img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s;
+  }
+
+  .gallery-grid img:hover { transform: scale(1.02); }
+
+  .gallery-grid img:first-child {
+    grid-column: 1 / -1;
+    height: 220px;
+  }
+
+  /* ===== Access ===== */
+  .access {
+    background: var(--green-deep);
+    padding-top: 60px;
+  }
+
+  .access .section-title { color: white; }
+  .access .section-label { color: var(--green-light); }
+  .access .divider { background: var(--green-light); }
+
+  .access-info {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 12px;
+    padding: 24px 20px;
+    margin-bottom: 20px;
+  }
+
+  .access-row {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    margin-bottom: 16px;
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.7;
+  }
+
+  .access-row:last-child { margin-bottom: 0; }
+
+  .access-icon {
+    font-size: 1rem;
+    min-width: 20px;
+    margin-top: 2px;
+  }
+
+  .map-wrap {
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 28px;
+    height: 220px;
+  }
+
+  .map-wrap iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+
+  .access-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .access-btn-tel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: white;
+    color: var(--green-deep);
+    padding: 16px 24px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.04em;
+    transition: transform 0.2s;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  }
+
+  .access-btn-tel:hover { transform: translateY(-2px); }
+
+  .access-btn-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: #06C755;
+    color: white;
+    padding: 16px 24px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.04em;
+    transition: transform 0.2s, opacity 0.2s;
+    box-shadow: 0 4px 20px rgba(6,199,85,0.3);
+  }
+
+  .access-btn-line:hover { transform: translateY(-2px); opacity: 0.92; }
+
+  /* ===== Footer ===== */
+  footer {
+    background: #1a2e22;
+    padding: 32px 24px;
+    text-align: center;
+  }
+
+  .footer-logo {
+    font-family: 'Shippori Mincho', serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--green-light);
+    letter-spacing: 0.06em;
+    margin-bottom: 8px;
+  }
+
+  .footer-address {
+    font-size: 0.78rem;
+    color: rgba(255,255,255,0.45);
+    line-height: 1.8;
+    margin-bottom: 16px;
+  }
+
+  .footer-copy {
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.28);
+    letter-spacing: 0.06em;
+  }
+
+  /* ===== Floating CTA ===== */
+  .float-cta {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 90;
+    width: calc(100% - 40px);
+    max-width: 480px;
+  }
+
+  .float-btn-tel {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background: var(--green-deep);
+    color: white;
+    padding: 14px 16px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    box-shadow: 0 4px 20px rgba(45,90,61,0.4);
+    transition: transform 0.2s;
+  }
+
+  .float-btn-tel:hover { transform: translateY(-2px); }
+
+  .float-btn-line {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    background: #06C755;
+    color: white;
+    padding: 14px 16px;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    box-shadow: 0 4px 20px rgba(6,199,85,0.35);
+    transition: transform 0.2s;
+  }
+
+  .float-btn-line:hover { transform: translateY(-2px); }
+
+  /* ===== Scroll Animation ===== */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ===== Responsive ===== */
+  @media (min-width: 600px) {
+    .feature-card {
+      flex-direction: row;
+    }
+    .feature-img {
+      width: 240px;
+      height: auto;
+    }
+    .gallery-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .gallery-grid img:first-child {
+      grid-column: 1;
+      height: 200px;
+    }
+    .gallery-grid img {
+      height: 200px;
+    }
+  }
+</style>
 </head>
 <body>
 
+<!-- ===== Header ===== -->
 <header>
-    <h1>こころ鍼灸接骨院・整体院</h1>
-    <p>肩こり・腰痛・膝の不安を、状態に合わせて丁寧に施術します</p>
+  <div class="logo">
+    こころ鍼灸接骨院・整体院
+    <span>台東区入谷 — 肩こり・腰痛・膝の不安</span>
+  </div>
+  <div class="header-cta">
+    <a href="tel:03-5603-4115" class="btn-tel" aria-label="電話で予約">
+      📞 電話
+    </a>
+    <a href="https://lin.ee/qRLyhOa" class="btn-line" aria-label="LINEで予約">
+      💬 LINE
+    </a>
+  </div>
 </header>
 
-<div class="container">
+<!-- ===== Hero ===== -->
+<section class="hero" aria-label="メインビジュアル">
+  <div class="hero-bg" role="img" aria-label="施術中の手元の写真"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="hero-label">台東区入谷 ／ 国家資格者が対応</span>
+    <h1>
+      肩こり・腰痛・膝の不安を、<br>
+      <em>今の体で、もっと動ける。</em><br>
+      そのためにサポートします。
+    </h1>
+    <p class="hero-sub">
+      痛い場所だけでなく、姿勢や動き方も確認します。<br>
+      鍼灸・接骨・整体を組み合わせて、<br>
+      お一人おひとりの状態に合わせた施術を行っています。
+    </p>
+    <div class="hero-buttons">
+      <a href="tel:03-5603-4115" class="btn-primary">
+        📞 電話で予約・相談する
+      </a>
+      <a href="https://lin.ee/qRLyhOa" class="btn-secondary">
+        💬 LINEで予約・相談する
+      </a>
+    </div>
+  </div>
+  <div class="hero-scroll" aria-hidden="true">
+    <span>SCROLL</span>
+    <span>↓</span>
+  </div>
+</section>
 
-    <section>
-        <h2>このようなお悩みはありませんか？</h2>
-        <ul class="problem-list">
-            <li>長年、肩こりや腰の重さを繰り返している</li>
-            <li>階段の上り下りで、不安を感じる</li>
-            <li>マッサージに行ってもすぐ元に戻ってしまう</li>
-            <li>「もう年のせいかな...」と感じている</li>
-            <li>歩き方や立ち方が、以前と少し変わってきた気がする</li>
-        </ul>
-        <p style="margin-top:1.5rem; font-size:0.95rem;">当院では、つらさの出ている場所だけでなく、普段の姿勢や体の使い方も確認しながら、お一人おひとりに合わせた施術を行います。</p>
-    </section>
+<!-- ===== Trouble ===== -->
+<section class="trouble" aria-labelledby="trouble-title">
+  <div class="section-inner">
+    <p class="section-label">TROUBLE</p>
+    <h2 class="section-title" id="trouble-title">このようなお悩みは<br>ありませんか？</h2>
+    <div class="divider"></div>
+    <ul class="trouble-list">
+      <li>長年、肩こりや腰の重さを繰り返している</li>
+      <li>階段の上り下りで、不安を感じる</li>
+      <li>マッサージに行ってもすぐ元に戻ってしまう</li>
+      <li>「もう年のせいかな…」と感じている</li>
+      <li>歩き方や立ち方が、以前と少し変わってきた気がする</li>
+      <li>靴下を履く瞬間に、腰や股関節がつらい</li>
+    </ul>
+    <div class="trouble-closing">
+      つらさの出ている場所だけでなく、<strong>普段の姿勢や体の使い方</strong>も確認しながら、<br>
+      お一人おひとりに合わせた施術を行っています。<br>
+      「少しでも動きやすく過ごしたい」そんな方が、気軽に相談できる場所を目指しています。
+    </div>
+  </div>
+</section>
 
-    <section>
-        <h2>当院の3つの特徴</h2>
-        <div class="feature-item">
-            <h3>1. 国家資格者が丁寧に対応します</h3>
-            <p>柔道整復師・はり師・きゅう師の国家資格を持つ施術者が、状態やお悩みを確認しながら無理のない施術を心がけています。</p>
-        </div>
-        <div class="feature-item">
-            <h3>2. 鍼灸・接骨・整体を組み合わせます</h3>
-            <p>手技・鍼灸・整体などを状態に合わせて組み合わせ、原因や負担のかかり方に合わせた最適なアプローチを行います。</p>
-        </div>
-        <div class="feature-item">
-            <h3>3. 「今の体を長く使うため」のサポート</h3>
-            <p>負担がたまりにくい体づくりやセルフケアの発信を通じて、これからも趣味や日常生活をスムーズに続けられるよう支援します。</p>
-        </div>
-    </section>
+<!-- ===== Features ===== -->
+<section class="features" aria-labelledby="features-title">
+  <div class="section-inner">
+    <p class="section-label">FEATURES</p>
+    <h2 class="section-title" id="features-title">当院の3つの特徴</h2>
+    <div class="divider"></div>
 
-    <section>
-        <h2>施術者のご紹介</h2>
-        <div class="profile-box">
-            <div class="profile-name">西川路 仁（にしかわじ ひとし）</div>
-            <div class="profile-title">【保有資格】柔道整復師・療術師</div>
-            <p style="margin:0; font-size:0.95rem;">「歩く・立つをいつまでもスムーズに」を大切に、日常の体の使い方や動き方を確認しながら、無理のない形で過ごせるようサポートいたします。</p>
-        </div>
-        <div class="profile-box">
-            <div class="profile-name">王鵬（おうほう）</div>
-            <div class="profile-title">【保有資格】鍼灸師 / 柔道整復師</div>
-            <p style="margin:0; font-size:0.95rem;">美容鍼やフェイシャルケアを中心に、東洋医学の考えを取り入れた丁寧な対応を心がけています。おからだのバランスも含めてご相談ください。</p>
-        </div>
-    </section>
+    <div class="feature-card fade-in">
+      <img src="images/treatment-hands.jpg" alt="施術者の手による丁寧な手技施術" class="feature-img">
+      <div class="feature-body">
+        <div class="feature-num">01</div>
+        <h3 class="feature-title">国家資格者が丁寧に対応します</h3>
+        <p class="feature-text">柔道整復師・はり師・きゅう師の国家資格を持つ施術者が、状態やお悩みを確認しながら施術を行います。お一人おひとりの体の状態に合わせて、無理のない施術を心がけています。</p>
+      </div>
+    </div>
 
-    <section>
-        <h2>料金のご案内</h2>
-        
-        <h3>【初めての方】</h3>
-        <table>
-            <tr><th>初診料 <span style="font-weight:normal; font-size:0.8rem;">(お身体の状態確認)</span></th><td>約1,000円</td></tr>
-            <tr><th>自費施術料 <span style="font-weight:normal; font-size:0.8rem;">(手技・鍼灸・整体)</span></th><td>2,300円〜</td></tr>
-            <tr><td colspan="2" class="table-sub">※保険適用の場合は、1,000円〜となります。捻挫・打撲・挫傷など原因のはっきりしたケガには健康保険が適用できます。</td></tr>
-        </table>
+    <div class="feature-card fade-in">
+      <img src="images/treatment-room.jpg" alt="清潔で整えられた施術室" class="feature-img">
+      <div class="feature-body">
+        <div class="feature-num">02</div>
+        <h3 class="feature-title">鍼灸・接骨・整体を組み合わせます</h3>
+        <p class="feature-text">肩・腰・膝などのお悩みは、同じ症状でも原因や負担のかかり方が人によって異なります。一つの方法だけにこだわらず、手技・鍼灸・整体などを状態に合わせて組み合わせながら施術を行います。</p>
+      </div>
+    </div>
 
-        <h3 style="margin-top:2rem;">【じっくり施術・特別メニュー】</h3>
-        <table>
-            <tr><th>慢性的なお悩み・全身調整 <span style="font-weight:normal; font-size:0.8rem;">(目安60分)</span></th><td>6,000円〜</td></tr>
-            <tr><th>美容鍼</th><td>10,000円</td></tr>
-            <tr><th>カッサ（刮痧）</th><td>6,000円</td></tr>
-            <tr><th>オイルマッサージ</th><td>6,000円</td></tr>
-            <tr><th>施術延長 (10分)</th><td>800円</td></tr>
-        </table>
-        <p style="font-size:0.85rem; color:#666; margin-top:1rem;">※交通事故・自賠責保険にも対応しております（窓口負担軽減）。現在整形外科に通院中の方もご相談ください。</p>
-    </section>
+    <div class="feature-card fade-in">
+      <img src="images/waiting-room.jpg" alt="温かみのある待合室" class="feature-img">
+      <div class="feature-body">
+        <div class="feature-num">03</div>
+        <h3 class="feature-title">「今の体を長く使うため」のサポート</h3>
+        <p class="feature-text">痛みのある場所だけでなく、姿勢や動き方、普段の体の使い方も確認します。「少しでも動きやすく過ごしたい」「これからも趣味や日常生活を続けたい」そんな方に向けて、負担がたまりにくい体づくりをサポートします。</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <section>
-        <h2>アクセス・ご予約</h2>
-        <p style="font-weight: bold; margin-bottom: 0.5rem;">こころ鍼灸接骨院・整体院</p>
-        <p style="margin: 0 0 1rem 0; font-size: 0.95rem;">
-            〒110-0013 東京都台東区入谷1-7-7<br>
-            <span style="color:#666; font-size:0.85rem;">（台東入谷郵便局近く、飯山産婦人科医院さんとなり）</span>
+<!-- ===== Staff ===== -->
+<section class="staff" aria-labelledby="staff-title">
+  <div class="section-inner">
+    <p class="section-label">STAFF</p>
+    <h2 class="section-title" id="staff-title">施術者のご紹介</h2>
+    <div class="divider"></div>
+
+    <div class="staff-card fade-in">
+      <img src="images/hitoshi.jpg" alt="西川路仁 柔道整復師・療術師" class="staff-img">
+      <div class="staff-body">
+        <p class="staff-name">西川路 仁</p>
+        <p class="staff-kana">にしかわじ ひとし</p>
+        <span class="staff-license">柔道整復師・療術師</span>
+        <p class="staff-text">
+          肩・腰・膝などのお悩みに対して、痛みのある場所だけでなく、日常の体の使い方や動き方も確認しながら施術を行っています。「歩く・立つをいつまでもスムーズに」そんな想いを大切にしながら、無理のない形で日常を過ごせるようサポートしています。
         </p>
+      </div>
+    </div>
 
-        <div class="btn-zone">
-            <a href="tel:03-5603-4115" class="btn btn-tel">📞 電話で予約・相談する<br><span style="font-size:0.8rem; font-weight:normal;">03-5603-4115</span></a>
-            <a href="https://lin.ee/qRLyhOa" class="btn btn-line" target="_blank" rel="noopener noreferrer">💬 LINEで予約・相談する</a>
+    <div class="staff-card fade-in">
+      <img src="images/ouhou.jpg" alt="王鵬 鍼灸師・柔道整復師" class="staff-img">
+      <div class="staff-body">
+        <p class="staff-name">王鵬</p>
+        <p class="staff-kana">おうほう</p>
+        <span class="staff-license">鍼灸師・柔道整復師</span>
+        <p class="staff-text">
+          美容鍼やフェイシャルケアを中心に、お悩みや状態に合わせた施術を行っています。東洋医学の考えも取り入れながら、リラックスして施術を受けていただけるよう、丁寧な対応を心がけています。美容面だけでなく、おからだのバランスも含めてご相談いただけます。
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Philosophy ===== -->
+<section class="philosophy" aria-labelledby="philosophy-title">
+  <div class="section-inner">
+    <p class="section-label">OUR PHILOSOPHY</p>
+    <h2 class="section-title" id="philosophy-title">私たちの想い</h2>
+    <div class="divider"></div>
+    <blockquote class="philosophy-quote">
+      「どこに相談すればいいのかわからない」<br>
+      「こんなことで行っていいのかな」<br><br>
+      そんな不安を抱えた方にも、安心してお話しいただける場所でありたいと考えています。<br>
+      お話を伺いながら、無理のない形でサポートいたします。
+    </blockquote>
+  </div>
+</section>
+
+<!-- ===== Price ===== -->
+<section class="price" aria-labelledby="price-title">
+  <div class="section-inner">
+    <p class="section-label">PRICE</p>
+    <h2 class="section-title" id="price-title">料金のご案内</h2>
+    <div class="divider"></div>
+
+    <div class="price-group fade-in">
+      <div class="price-group-title">【初めての方へ】</div>
+      <table class="price-table">
+        <tr>
+          <td>初診料（お身体の状態確認）</td>
+          <td>約 1,000円</td>
+        </tr>
+        <tr>
+          <td>自費施術料（手技・鍼灸・整体）</td>
+          <td>2,300円〜</td>
+        </tr>
+        <tr>
+          <td>保険適用の場合</td>
+          <td>1,000円〜</td>
+        </tr>
+      </table>
+      <p class="price-note">※ 捻挫・打撲・挫傷など原因のはっきりしたケガには健康保険が適用できます。</p>
+    </div>
+
+    <div class="price-group fade-in">
+      <div class="price-group-title">【施術の追加について】</div>
+      <table class="price-table">
+        <tr>
+          <td>施術延長（10分）</td>
+          <td>800円</td>
+        </tr>
+        <tr>
+          <td>オプション施術（鍼灸・整体・カッピングなど）</td>
+          <td>各 2,000円</td>
+        </tr>
+      </table>
+      <p class="price-note">※ お身体の状態に合わせて提案いたします。無理に追加施術をおすすめすることはありません。</p>
+    </div>
+
+    <div class="price-group fade-in">
+      <div class="price-group-title">【じっくり施術・特別メニュー】</div>
+      <table class="price-table">
+        <tr>
+          <td>慢性的なお悩み・全身調整（目安60分）</td>
+          <td>6,000円〜</td>
+        </tr>
+        <tr>
+          <td>美容鍼</td>
+          <td>10,000円</td>
+        </tr>
+        <tr>
+          <td>カッサ（刮痧）</td>
+          <td>6,000円</td>
+        </tr>
+        <tr>
+          <td>オイルマッサージ</td>
+          <td>6,000円</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="price-group fade-in">
+      <div class="price-group-title">【交通事故・自賠責保険対応】</div>
+      <table class="price-table">
+        <tr>
+          <td>むち打ち・首や腰の痛み・違和感など</td>
+          <td>要相談</td>
+        </tr>
+      </table>
+      <p class="price-note">※ 自賠責保険が適用となる場合、患者さまのご負担は軽減されます。現在整形外科に通院中の方もまずはご相談ください。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Gallery ===== -->
+<section class="gallery" aria-label="院内ギャラリー">
+  <div class="section-inner">
+    <p class="section-label">GALLERY</p>
+    <h2 class="section-title">院内のご紹介</h2>
+    <div class="divider"></div>
+  </div>
+  <div style="max-width:720px;margin:0 auto;padding:0 24px 72px;">
+    <div class="gallery-grid">
+      <img src="images/exterior.jpg" alt="こころ鍼灸接骨院の外観・入口" loading="lazy">
+      <img src="images/treatment-room.jpg" alt="清潔で整えられた施術ベッド" loading="lazy">
+      <img src="images/waiting-room.jpg" alt="ゆったりとした待合室" loading="lazy">
+      <img src="images/treatment-hands.jpg" alt="丁寧な手技施術の様子" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ===== Access ===== -->
+<section class="access" aria-labelledby="access-title">
+  <div class="section-inner">
+    <p class="section-label">ACCESS</p>
+    <h2 class="section-title" id="access-title">アクセス・ご予約</h2>
+    <div class="divider"></div>
+
+    <div class="access-info fade-in">
+      <div class="access-row">
+        <span class="access-icon">📍</span>
+        <div>
+          〒110-0013 東京都台東区入谷1-7-7<br>
+          <span style="font-size:0.8rem;color:rgba(255,255,255,0.55);">台東入谷郵便局近く・飯山産婦人科医院となり</span>
         </div>
-    </section>
+      </div>
+      <div class="access-row">
+        <span class="access-icon">📞</span>
+        <div>03-5603-4115</div>
+      </div>
+      <div class="access-row">
+        <span class="access-icon">🚉</span>
+        <div>東京メトロ日比谷線「入谷駅」より徒歩約3分</div>
+      </div>
+    </div>
 
+    <div class="map-wrap">
+      <iframe
+        src="https://maps.google.com/maps?q=35.720209,139.785185&z=17&output=embed"
+        title="こころ鍼灸接骨院の地図"
+        loading="lazy"
+        allowfullscreen>
+      </iframe>
+    </div>
+
+    <div class="access-buttons fade-in">
+      <a href="tel:03-5603-4115" class="access-btn-tel">
+        📞 電話で予約・相談する<br>
+        <span style="font-size:0.75rem;font-weight:400;opacity:0.7;">03-5603-4115</span>
+      </a>
+      <a href="https://lin.ee/qRLyhOa" class="access-btn-line">
+        💬 LINEで予約・相談する<br>
+        <span style="font-size:0.75rem;font-weight:400;opacity:0.85;">24時間受付・返信率100%</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Footer ===== -->
+<footer>
+  <p class="footer-logo">こころ鍼灸接骨院・整体院</p>
+  <p class="footer-address">
+    〒110-0013 東京都台東区入谷1-7-7<br>
+    TEL: 03-5603-4115
+  </p>
+  <p class="footer-copy">© こころ鍼灸接骨院・整体院 All Rights Reserved.</p>
+</footer>
+
+<!-- ===== Floating CTA ===== -->
+<div class="float-cta" role="navigation" aria-label="予約ボタン">
+  <a href="tel:03-5603-4115" class="float-btn-tel">
+    📞 電話で予約
+  </a>
+  <a href="https://lin.ee/qRLyhOa" class="float-btn-line">
+    💬 LINEで予約
+  </a>
 </div>
 
-<footer>
-    <p>&copy; こころ鍼灸接骨院・整体院 All Rights Reserved.</p>
-</footer>
+<script>
+  // Scroll fade-in animation
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
