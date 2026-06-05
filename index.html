@@ -30,13 +30,7 @@
       "openingHoursSpecification": [
         {
           "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday"
-          ],
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
           "opens": "09:00",
           "closes": "19:00"
         }
@@ -145,9 +139,7 @@
             letter-spacing: 0.03em;
             transition: background 0.2s;
         }
-        .btn-tel:hover {
-            background: var(--green-mid);
-        }
+        .btn-tel:hover { background: var(--green-mid); }
         .btn-line {
             display: flex;
             align-items: center;
@@ -160,9 +152,7 @@
             font-weight: 500;
             transition: opacity 0.2s;
         }
-        .btn-line:hover {
-            opacity: 0.88;
-        }
+        .btn-line:hover { opacity: 0.88; }
 
         /* ===== Hero ===== */
         .hero {
@@ -185,9 +175,9 @@
         .hero-overlay {
             position: absolute;
             inset: 0;
-            background: linear-gradient(135deg, 
-                rgba(45, 90, 61, 0.92) 0%, 
-                rgba(45, 90, 61, 0.7) 50%, 
+            background: linear-gradient(135deg,
+                rgba(45, 90, 61, 0.92) 0%,
+                rgba(45, 90, 61, 0.7) 50%,
                 rgba(45, 90, 61, 0.4) 100%
             );
         }
@@ -200,7 +190,7 @@
         }
         @keyframes fadeUp {
             from { opacity: 0; transform: translateY(28px); }
-            to { opacity: 1; transform: translateY(0); }
+            to   { opacity: 1; transform: translateY(0); }
         }
         .hero-label {
             display: inline-block;
@@ -290,13 +280,11 @@
         }
         @keyframes bounce {
             0%, 100% { transform: translateX(-50%) translateY(0); }
-            50% { transform: translateX(-50%) translateY(6px); }
+            50%       { transform: translateX(-50%) translateY(6px); }
         }
 
         /* ===== Section Base ===== */
-        section {
-            padding: 72px 24px;
-        }
+        section { padding: 72px 24px; }
         .section-inner {
             max-width: 720px;
             margin: 0 auto;
@@ -307,7 +295,15 @@
             color: var(--green-mid);
             text-transform: uppercase;
             font-weight: 500;
+            margin-bottom: 4px;
+        }
+        /* 英語ラベルに日本語サブテキストを追加 */
+        .section-label-sub {
+            font-size: 0.68rem;
+            color: var(--text-soft);
+            letter-spacing: 0.06em;
             margin-bottom: 12px;
+            font-family: 'Noto Sans JP', sans-serif;
         }
         .section-title {
             font-family: 'Shippori Mincho', serif;
@@ -327,9 +323,7 @@
         }
 
         /* ===== Trouble Section ===== */
-        .trouble {
-            background: var(--warm-white);
-        }
+        .trouble { background: var(--warm-white); }
         .trouble-list {
             list-style: none;
             display: flex;
@@ -350,14 +344,9 @@
             color: var(--text-mid);
             background: white;
             transition: background 0.2s;
-            animation: fadeUp 0.6s ease both;
         }
-        .trouble-list li:last-child {
-            border-bottom: none;
-        }
-        .trouble-list li:hover {
-            background: var(--green-pale);
-        }
+        .trouble-list li:last-child { border-bottom: none; }
+        .trouble-list li:hover { background: var(--green-pale); }
         .trouble-list li::before {
             content: '';
             width: 8px;
@@ -377,9 +366,7 @@
         }
 
         /* ===== Features Section ===== */
-        .features {
-            background: var(--cream);
-        }
+        .features { background: var(--cream); }
         .feature-card {
             background: white;
             border-radius: 16px;
@@ -399,9 +386,7 @@
             height: 220px;
             object-fit: cover;
         }
-        .feature-body {
-            padding: 24px 22px;
-        }
+        .feature-body { padding: 24px 22px; }
         .feature-num {
             font-family: 'Shippori Mincho', serif;
             font-size: 2.5rem;
@@ -425,18 +410,11 @@
         }
 
         /* ===== Staff Section ===== */
-        .staff {
-            background: var(--green-deep);
-        }
-        .staff .section-title {
-            color: white;
-        }
-        .staff .section-label {
-            color: var(--green-light);
-        }
-        .staff .divider {
-            background: var(--green-light);
-        }
+        .staff { background: var(--green-deep); }
+        .staff .section-title  { color: white; }
+        .staff .section-label  { color: var(--green-light); }
+        .staff .section-label-sub { color: rgba(255,255,255,0.45); }
+        .staff .divider        { background: var(--green-light); }
         .staff-card {
             background: rgba(255,255,255,0.08);
             border: 1px solid rgba(255,255,255,0.15);
@@ -451,9 +429,7 @@
             object-fit: cover;
             object-position: center top;
         }
-        .staff-body {
-            padding: 24px 22px;
-        }
+        .staff-body { padding: 24px 22px; }
         .staff-name {
             font-family: 'Shippori Mincho', serif;
             font-size: 1.2rem;
@@ -486,9 +462,7 @@
         }
 
         /* ===== Philosophy ===== */
-        .philosophy {
-            background: var(--cream);
-        }
+        .philosophy { background: var(--cream); }
         .philosophy-quote {
             font-family: 'Shippori Mincho', serif;
             font-size: clamp(1rem, 3vw, 1.3rem);
@@ -503,13 +477,66 @@
             margin-bottom: 28px;
         }
 
+        /* ===== Media Section ===== */
+        .media { background: #f9f7f4; }
+        .media .section-label  { color: var(--text-soft); }
+        .media .section-title  { text-align: center; }
+        .media .divider        { margin-left: auto; margin-right: auto; }
+        .media-lead {
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-soft);
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+        .media-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 16px;
+        }
+        .media-card {
+            display: block;
+            background: white;
+            border-radius: 12px;
+            padding: 24px 20px;
+            text-decoration: none;
+            border: 1px solid var(--border);
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+        .media-card:hover {
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transform: translateY(-2px);
+        }
+        .media-card-label {
+            font-size: 0.7rem;
+            letter-spacing: 0.12em;
+            color: var(--text-soft);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+        }
+        .media-card-title {
+            font-family: 'Shippori Mincho', serif;
+            font-size: 1rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+            line-height: 1.5;
+        }
+        .media-card-text {
+            font-size: 0.84rem;
+            color: var(--text-soft);
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+        .media-card-link {
+            font-size: 0.8rem;
+            color: var(--green-mid);
+            font-weight: 600;
+        }
+
         /* ===== Price Section ===== */
-        .price {
-            background: var(--warm-white);
-        }
-        .price-group {
-            margin-bottom: 28px;
-        }
+        .price { background: var(--warm-white); }
+        .price-group { margin-bottom: 28px; }
         .price-group-title {
             font-family: 'Shippori Mincho', serif;
             font-size: 1rem;
@@ -533,12 +560,8 @@
             border-bottom: 1px solid var(--border);
             transition: background 0.2s;
         }
-        .price-table tr:last-child {
-            border-bottom: none;
-        }
-        .price-table tr:hover {
-            background: var(--green-pale);
-        }
+        .price-table tr:last-child { border-bottom: none; }
+        .price-table tr:hover { background: var(--green-pale); }
         .price-table td {
             padding: 14px 16px;
             font-size: 0.88rem;
@@ -580,9 +603,7 @@
             border-radius: 8px;
             transition: transform 0.3s;
         }
-        .gallery-grid img:hover {
-            transform: scale(1.02);
-        }
+        .gallery-grid img:hover { transform: scale(1.02); }
         .gallery-grid img:first-child {
             grid-column: 1 / -1;
             height: 220px;
@@ -593,15 +614,10 @@
             background: var(--green-deep);
             padding-top: 60px;
         }
-        .access .section-title {
-            color: white;
-        }
-        .access .section-label {
-            color: var(--green-light);
-        }
-        .access .divider {
-            background: var(--green-light);
-        }
+        .access .section-title    { color: white; }
+        .access .section-label    { color: var(--green-light); }
+        .access .section-label-sub { color: rgba(255,255,255,0.45); }
+        .access .divider          { background: var(--green-light); }
         .access-info {
             background: rgba(255,255,255,0.08);
             border: 1px solid rgba(255,255,255,0.15);
@@ -618,9 +634,7 @@
             color: rgba(255,255,255,0.85);
             line-height: 1.7;
         }
-        .access-row:last-child {
-            margin-bottom: 0;
-        }
+        .access-row:last-child { margin-bottom: 0; }
         .access-icon {
             font-size: 1rem;
             min-width: 20px;
@@ -656,15 +670,22 @@
             letter-spacing: 0.04em;
             transition: transform 0.2s;
             box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            text-align: center;
+            flex-direction: column;
+            line-height: 1.4;
         }
-        .access-btn-tel:hover {
-            transform: translateY(-2px);
+        .access-btn-tel:hover { transform: translateY(-2px); }
+        .access-btn-tel-sub {
+            font-size: 0.75rem;
+            font-weight: 400;
+            opacity: 0.7;
         }
         .access-btn-line {
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 10px;
+            gap: 4px;
             background: #06C755;
             color: white;
             padding: 16px 24px;
@@ -674,10 +695,17 @@
             letter-spacing: 0.04em;
             transition: transform 0.2s, opacity 0.2s;
             box-shadow: 0 4px 20px rgba(6,199,85,0.3);
+            text-align: center;
+            line-height: 1.4;
         }
         .access-btn-line:hover {
             transform: translateY(-2px);
             opacity: 0.92;
+        }
+        .access-btn-line-sub {
+            font-size: 0.75rem;
+            font-weight: 400;
+            opacity: 0.85;
         }
 
         /* ===== Footer ===== */
@@ -733,9 +761,7 @@
             box-shadow: 0 4px 20px rgba(45,90,61,0.4);
             transition: transform 0.2s;
         }
-        .float-btn-tel:hover {
-            transform: translateY(-2px);
-        }
+        .float-btn-tel:hover { transform: translateY(-2px); }
         .float-btn-line {
             flex: 1;
             display: flex;
@@ -751,9 +777,7 @@
             box-shadow: 0 4px 20px rgba(6,199,85,0.35);
             transition: transform 0.2s;
         }
-        .float-btn-line:hover {
-            transform: translateY(-2px);
-        }
+        .float-btn-line:hover { transform: translateY(-2px); }
 
         /* ===== Scroll Animation ===== */
         .fade-in {
@@ -768,9 +792,7 @@
 
         /* ===== Responsive ===== */
         @media (min-width: 600px) {
-            .feature-card {
-                flex-direction: row;
-            }
+            .feature-card { flex-direction: row; }
             .feature-img {
                 width: 240px;
                 height: auto;
@@ -782,9 +804,7 @@
                 grid-column: 1;
                 height: 200px;
             }
-            .gallery-grid img {
-                height: 200px;
-            }
+            .gallery-grid img { height: 200px; }
         }
     </style>
 </head>
@@ -796,8 +816,8 @@
             <span>台東区入谷 — 肩こり・腰痛・膝の不安</span>
         </div>
         <div class="header-cta">
-            <a href="tel:03-5603-4115" class="btn-tel" aria-label="電話で予約"> 📞 電話 </a>
-            <a href="https://lin.ee/VZpvqCC" class="btn-line" aria-label="LINEで予約"> 💬 LINE </a>
+            <a href="tel:03-5603-4115" class="btn-tel" aria-label="電話で予約">📞 電話</a>
+            <a href="https://lin.ee/VZpvqCC" class="btn-line" aria-label="LINEで予約">💬 LINE</a>
         </div>
     </header>
 
@@ -817,8 +837,8 @@
                 お一人おひとりの状態に合わせた施術を行っています。
             </p>
             <div class="hero-buttons">
-                <a href="tel:03-5603-4115" class="btn-primary"> 📞 電話で予約・相談する </a>
-                <a href="https://lin.ee/VZpvqCC" class="btn-secondary"> 💬 LINEで予約・相談する </a>
+                <a href="tel:03-5603-4115" class="btn-primary">📞 電話で予約・相談する</a>
+                <a href="https://lin.ee/VZpvqCC" class="btn-secondary">💬 LINEで予約・相談する</a>
             </div>
         </div>
         <div class="hero-scroll" aria-hidden="true">
@@ -830,6 +850,7 @@
     <section class="trouble" aria-labelledby="trouble-title">
         <div class="section-inner">
             <p class="section-label">TROUBLE</p>
+            <p class="section-label-sub">お悩み</p>
             <h2 class="section-title" id="trouble-title">このようなお悩みは<br>ありませんか？</h2>
             <div class="divider"></div>
             <ul class="trouble-list">
@@ -851,9 +872,10 @@
     <section class="features" aria-labelledby="features-title">
         <div class="section-inner">
             <p class="section-label">FEATURES</p>
+            <p class="section-label-sub">当院の特徴</p>
             <h2 class="section-title" id="features-title">当院の3つの特徴</h2>
             <div class="divider"></div>
-            
+
             <div class="feature-card fade-in">
                 <img src="images/treatment-hands.jpg" alt="施術者の手による丁寧な手技施術" class="feature-img">
                 <div class="feature-body">
@@ -881,12 +903,12 @@
                 </div>
             </div>
         </div>
-</section>
+    </section>
 
-<section class="voom">
-<section class="staff" aria-labelledby="staff-title">
+    <section class="staff" aria-labelledby="staff-title">
         <div class="section-inner">
             <p class="section-label">STAFF</p>
+            <p class="section-label-sub" style="color:rgba(255,255,255,0.45);">施術者紹介</p>
             <h2 class="section-title" id="staff-title">施術者のご紹介</h2>
             <div class="divider"></div>
 
@@ -896,9 +918,7 @@
                     <p class="staff-name">西川路 仁</p>
                     <p class="staff-kana">にしかわじ ひとし</p>
                     <span class="staff-license">柔道整復師・療術師</span>
-                    <p class="staff-text">
-                        肩・腰・膝などのお悩みに対して、痛みのある場所だけでなく、日常の体の使い方や動き方も確認しながら施術を行っています。「歩く・立つをいつまでもスムーズに」そんな想いを大切にしながら、無理のない形で日常を過ごせるようサポートしています。
-                    </p>
+                    <p class="staff-text">肩・腰・膝などのお悩みに対して、痛みのある場所だけでなく、日常の体の使い方や動き方も確認しながら施術を行っています。「歩く・立つをいつまでもスムーズに」そんな想いを大切にしながら、無理のない形で日常を過ごせるようサポートしています。</p>
                 </div>
             </div>
 
@@ -908,9 +928,7 @@
                     <p class="staff-name">王鵬</p>
                     <p class="staff-kana">おうほう</p>
                     <span class="staff-license">鍼灸師・柔道整復師</span>
-                    <p class="staff-text">
-                        美容鍼やフェイシャルケアを中心に、お悩みや状態に合わせた施術を行っています。東洋医学の考えも取り入れながら、リラックスして施術を受けていただけるよう、丁寧な対応を心がけています。美容面だけでなく、おからだのバランスも含めてご相談いただけます。
-                    </p>
+                    <p class="staff-text">美容鍼やフェイシャルケアを中心に、お悩みや状態に合わせた施術を行っています。東洋医学の考えも取り入れながら、リラックスして施術を受けていただけるよう、丁寧な対応を心がけています。美容面だけでなく、おからだのバランスも含めてご相談いただけます。</p>
                 </div>
             </div>
         </div>
@@ -919,6 +937,7 @@
     <section class="philosophy" aria-labelledby="philosophy-title">
         <div class="section-inner">
             <p class="section-label">OUR PHILOSOPHY</p>
+            <p class="section-label-sub">私たちの想い</p>
             <h2 class="section-title" id="philosophy-title">私たちの想い</h2>
             <div class="divider"></div>
             <blockquote class="philosophy-quote">
@@ -929,108 +948,62 @@
             </blockquote>
         </div>
     </section>
-<section id="media" style="padding: 80px 20px; background: #f9f7f4;">
-  <div style="max-width: 800px; margin: 0 auto;">
 
-    <p style="text-align: center; font-size: 0.8rem; letter-spacing: 0.15em; color: #8a7f72; margin-bottom: 12px;">MEDIA</p>
-    <h2 style="text-align: center; font-size: 1.5rem; font-weight: 700; color: #3a3028; margin-bottom: 12px; line-height: 1.6;">
-      日常の動きについて、<br>発信しています。
-    </h2>
-    <p style="text-align: center; font-size: 0.9rem; color: #6b6259; margin-bottom: 48px; line-height: 1.8;">
-      生活の中の小さな動きに気づくことが、<br>体を知る入口になると考えています。
-    </p>
-
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px;">
-
-      <!-- LINE VOOM -->
-      <a href="https://linevoom.line.me/user/_devVhr8SmyBanEr4Eh_HKDh0QDaHEhCPhLZbiIQ"
-         target="_blank" rel="noopener"
-         style="display: block; background: #fff; border-radius: 12px; padding: 28px 24px; text-decoration: none; border: 1px solid #e8e2da; transition: box-shadow 0.2s;"
-         onmouseover="this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)'"
-         onmouseout="this.style.boxShadow='none'">
-        <p style="font-size: 0.72rem; letter-spacing: 0.12em; color: #8a7f72; margin-bottom: 8px;">LINE VOOM</p>
-        <h3 style="font-size: 1rem; font-weight: 700; color: #3a3028; margin-bottom: 10px; line-height: 1.5;">
-          動きの理由を、図解で伝える
-        </h3>
-        <p style="font-size: 0.85rem; color: #6b6259; line-height: 1.7; margin-bottom: 16px;">
-          靴下を履く・立ち上がる・台所で振り向く。日常の動作について、なぜそう動くのかを図解で解説しています。
-        </p>
-        <span style="font-size: 0.8rem; color: #7a9e7e; font-weight: 600;">→ VOOMを見る</span>
-      </a>
-
-      <!-- note -->
-      <a href="https://note.com/kokoromotion"
-         target="_blank" rel="noopener"
-         style="display: block; background: #fff; border-radius: 12px; padding: 28px 24px; text-decoration: none; border: 1px solid #e8e2da; transition: box-shadow 0.2s;"
-         onmouseover="this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)'"
-         onmouseout="this.style.boxShadow='none'">
-        <p style="font-size: 0.72rem; letter-spacing: 0.12em; color: #8a7f72; margin-bottom: 8px;">note</p>
-        <h3 style="font-size: 1rem; font-weight: 700; color: #3a3028; margin-bottom: 10px; line-height: 1.5;">
-          観察の背景にある考え方
-        </h3>
-        <p style="font-size: 0.85rem; color: #6b6259; line-height: 1.7; margin-bottom: 16px;">
-          なぜすぐに答えを出さないのか。なぜ痛い場所だけを見ないのか。施術の背景にある思想を整理しています。
-        </p>
-        <span style="font-size: 0.8rem; color: #7a9e7e; font-weight: 600;">→ noteを読む</span>
-      </a>
-
-      <!-- 観察ガイドPDF -->
-      <a href="https://bit.ly/43z9LeK"
-         target="_blank" rel="noopener"
-         style="display: block; background: #fff; border-radius: 12px; padding: 28px 24px; text-decoration: none; border: 1px solid #e8e2da; transition: box-shadow 0.2s;"
-         onmouseover="this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)'"
-         onmouseout="this.style.boxShadow='none'">
-        <p style="font-size: 0.72rem; letter-spacing: 0.12em; color: #8a7f72; margin-bottom: 8px;">観察ガイド PDF</p>
-        <h3 style="font-size: 1rem; font-weight: 700; color: #3a3028; margin-bottom: 10px; line-height: 1.5;">
-          6つの動作の観察ポイント
-        </h3>
-        <p style="font-size: 0.85rem; color: #6b6259; line-height: 1.7; margin-bottom: 16px;">
-          台所・立ち上がり・靴下など、日常6動作の観察ポイントをまとめた無料ガイドです。
-        </p>
-        <span style="font-size: 0.8rem; color: #7a9e7e; font-weight: 600;">→ ガイドを見る</span>
-      </a>
-
-      <!-- Instagram -->
-      <a href="https://www.instagram.com/kokoro.motion"
-         target="_blank" rel="noopener"
-         style="display: block; background: #fff; border-radius: 12px; padding: 28px 24px; text-decoration: none; border: 1px solid #e8e2da; transition: box-shadow 0.2s;"
-         onmouseover="this.style.boxShadow='0 4px 20px rgba(0,0,0,0.08)'"
-         onmouseout="this.style.boxShadow='none'">
-        <p style="font-size: 0.72rem; letter-spacing: 0.12em; color: #8a7f72; margin-bottom: 8px;">Instagram</p>
-        <h3 style="font-size: 1rem; font-weight: 700; color: #3a3028; margin-bottom: 10px; line-height: 1.5;">
-          生活の1秒を切り取る
-        </h3>
-        <p style="font-size: 0.85rem; color: #6b6259; line-height: 1.7; margin-bottom: 16px;">
-          台所・洗面所・冷蔵庫。日常の動作の「あれ？」を、イラストで切り取っています。
-        </p>
-        <span style="font-size: 0.8rem; color: #7a9e7e; font-weight: 600;">→ Instagramを見る</span>
-      </a>
-
-    </div>
-  </div>
-</section>
+    <section class="media" aria-labelledby="media-title">
+        <div class="section-inner">
+            <p class="section-label" style="text-align:center;">MEDIA</p>
+            <p class="section-label-sub" style="text-align:center;">発信・コンテンツ</p>
+            <h2 class="section-title" id="media-title">日常の動きについて、<br>発信しています。</h2>
+            <div class="divider"></div>
+            <p class="media-lead">
+                生活の中の小さな動きに気づくことが、<br>体を知る入口になると考えています。
+            </p>
+            <div class="media-grid">
+                <a href="https://linevoom.line.me/user/_devVhr8SmyBanEr4Eh_HKDh0QDaHEhCPhLZbiIQ"
+                   target="_blank" rel="noopener" class="media-card fade-in">
+                    <p class="media-card-label">LINE VOOM</p>
+                    <h3 class="media-card-title">動きの理由を、図解で伝える</h3>
+                    <p class="media-card-text">靴下を履く・立ち上がる・台所で振り向く。日常の動作について、なぜそう動くのかを図解で解説しています。</p>
+                    <span class="media-card-link">→ VOOMを見る</span>
+                </a>
+                <a href="https://note.com/kokoromotion"
+                   target="_blank" rel="noopener" class="media-card fade-in">
+                    <p class="media-card-label">note</p>
+                    <h3 class="media-card-title">観察の背景にある考え方</h3>
+                    <p class="media-card-text">なぜすぐに答えを出さないのか。なぜ痛い場所だけを見ないのか。施術の背景にある思想を整理しています。</p>
+                    <span class="media-card-link">→ noteを読む</span>
+                </a>
+                <a href="https://bit.ly/43z9LeK"
+                   target="_blank" rel="noopener" class="media-card fade-in">
+                    <p class="media-card-label">観察ガイド PDF</p>
+                    <h3 class="media-card-title">6つの動作の観察ポイント</h3>
+                    <p class="media-card-text">台所・立ち上がり・靴下など、日常6動作の観察ポイントをまとめた無料ガイドです。</p>
+                    <span class="media-card-link">→ ガイドを見る</span>
+                </a>
+                <a href="https://www.instagram.com/kokoro.motion"
+                   target="_blank" rel="noopener" class="media-card fade-in">
+                    <p class="media-card-label">Instagram</p>
+                    <h3 class="media-card-title">生活の1秒を切り取る</h3>
+                    <p class="media-card-text">台所・洗面所・冷蔵庫。日常の動作の「あれ？」を、イラストで切り取っています。</p>
+                    <span class="media-card-link">→ Instagramを見る</span>
+                </a>
+            </div>
+        </div>
+    </section>
 
     <section class="price" aria-labelledby="price-title">
         <div class="section-inner">
             <p class="section-label">PRICE</p>
+            <p class="section-label-sub">料金案内</p>
             <h2 class="section-title" id="price-title">料金のご案内</h2>
             <div class="divider"></div>
 
             <div class="price-group fade-in">
                 <div class="price-group-title">【初めての方へ】</div>
                 <table class="price-table">
-                    <tr>
-                        <td>初診料（お身体の状態確認）</td>
-                        <td>約 1,000円</td>
-                    </tr>
-                    <tr>
-                        <td>自費施術料（手技・鍼灸・整体）</td>
-                        <td>2,300円〜</td>
-                    </tr>
-                    <tr>
-                        <td>保険適用の場合</td>
-                        <td>1,000円〜</td>
-                    </tr>
+                    <tr><td>初診料（お身体の状態確認）</td><td>約 1,000円</td></tr>
+                    <tr><td>自費施術料（手技・鍼灸・整体）</td><td>2,300円〜</td></tr>
+                    <tr><td>保険適用の場合</td><td>1,000円〜</td></tr>
                 </table>
                 <p class="price-note">※ 捻挫・打撲・挫傷など原因のはっきりしたケガには健康保険が適用できます。</p>
             </div>
@@ -1038,14 +1011,8 @@
             <div class="price-group fade-in">
                 <div class="price-group-title">【施術の追加について】</div>
                 <table class="price-table">
-                    <tr>
-                        <td>施術延長（10分）</td>
-                        <td>800円</td>
-                    </tr>
-                    <tr>
-                        <td>オプション施術（鍼灸・整体・カッピングなど）</td>
-                        <td>各 2,000円</td>
-                    </tr>
+                    <tr><td>施術延長（10分）</td><td>800円</td></tr>
+                    <tr><td>オプション施術（鍼灸・整体・カッピングなど）</td><td>各 2,000円</td></tr>
                 </table>
                 <p class="price-note">※ お身体の状態に合わせて提案いたします。無理に追加施術をおすすめすることはありません。</p>
             </div>
@@ -1053,32 +1020,17 @@
             <div class="price-group fade-in">
                 <div class="price-group-title">【じっくり施術・特別メニュー】</div>
                 <table class="price-table">
-                    <tr>
-                        <td>慢性的なお悩み・全身調整（目安60分）</td>
-                        <td>6,000円〜</td>
-                    </tr>
-                    <tr>
-                        <td>美容鍼</td>
-                        <td>10,000円</td>
-                    </tr>
-                    <tr>
-                        <td>カッサ（刮痧）</td>
-                        <td>6,000円</td>
-                    </tr>
-                    <tr>
-                        <td>オイルマッサージ</td>
-                        <td>6,000円</td>
-                    </tr>
+                    <tr><td>慢性的なお悩み・全身調整（目安60分）</td><td>6,000円〜</td></tr>
+                    <tr><td>美容鍼</td><td>10,000円</td></tr>
+                    <tr><td>カッサ（刮痧）</td><td>6,000円</td></tr>
+                    <tr><td>オイルマッサージ</td><td>6,000円</td></tr>
                 </table>
             </div>
 
             <div class="price-group fade-in">
                 <div class="price-group-title">【交通事故・自賠責保険対応】</div>
                 <table class="price-table">
-                    <tr>
-                        <td>むち打ち・首や腰の痛み・違和感など</td>
-                        <td>要相談</td>
-                    </tr>
+                    <tr><td>むち打ち・首や腰の痛み・違和感など</td><td>要相談</td></tr>
                 </table>
                 <p class="price-note">※ 自賠責保険が適用となる場合、患者さまのご負担は軽減されます。現在整形外科に通院中の方もまずはご相談ください。</p>
             </div>
@@ -1088,6 +1040,7 @@
     <section class="gallery" aria-label="院内ギャラリー">
         <div class="section-inner">
             <p class="section-label">GALLERY</p>
+            <p class="section-label-sub">院内のご紹介</p>
             <h2 class="section-title">院内のご紹介</h2>
             <div class="divider"></div>
         </div>
@@ -1104,6 +1057,7 @@
     <section class="access" aria-labelledby="access-title">
         <div class="section-inner">
             <p class="section-label">ACCESS</p>
+            <p class="section-label-sub" style="color:rgba(255,255,255,0.45);">アクセス・ご予約</p>
             <h2 class="section-title" id="access-title">アクセス・ご予約</h2>
             <div class="divider"></div>
 
@@ -1126,17 +1080,18 @@
             </div>
 
             <div class="map-wrap">
-                <iframe src="https://maps.google.com/maps?q=35.720209,139.785185&z=17&output=embed" title="こころ鍼灸接骨院の地図" loading="lazy" allowfullscreen></iframe>
+                <iframe src="https://maps.google.com/maps?q=35.720209,139.785185&z=17&output=embed"
+                        title="こころ鍼灸接骨院の地図" loading="lazy" allowfullscreen></iframe>
             </div>
 
             <div class="access-buttons fade-in">
                 <a href="tel:03-5603-4115" class="access-btn-tel">
-                    📞 電話で予約・相談する<br>
-                    <span style="font-size:0.75rem;font-weight:400;opacity:0.7;">03-5603-4115</span>
+                    <span>📞 電話で予約・相談する</span>
+                    <span class="access-btn-tel-sub">03-5603-4115</span>
                 </a>
-                <a href="https://lin.ee/VZpvqCC" class="access-btn-line">
-                    💬 LINEで予約・相談する<br>
-                    <span style="font-size:0.75rem;font-weight:400;opacity:0.85;"/span>
+                <a href="https://lin.ee/VZpvqCC" class="access-btn-line" target="_blank" rel="noopener">
+                    <span>💬 LINEで予約・相談する</span>
+                    <span class="access-btn-line-sub">24時間受付</span>
                 </a>
             </div>
         </div>
@@ -1152,12 +1107,11 @@
     </footer>
 
     <div class="float-cta" role="navigation" aria-label="予約ボタン">
-        <a href="tel:03-5603-4115" class="float-btn-tel"> 📞 電話で予約 </a>
-        <a href="https://lin.ee/VZpvqCC" class="float-btn-line"> 💬 LINEで予約 </a>
+        <a href="tel:03-5603-4115" class="float-btn-tel">📞 電話で予約</a>
+        <a href="https://lin.ee/VZpvqCC" class="float-btn-line" target="_blank" rel="noopener">💬 LINEで予約</a>
     </div>
 
     <script>
-        // Scroll fade-in animation
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
